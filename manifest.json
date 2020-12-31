@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "AWS SAML Auto Login for Containers",
+  "version": "1.0",
+  "description": "AWS SAML Auto Login extension for Multi-Account Containers.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://signin.aws.amazon.com/saml"
+      ],
+      "js": [
+        "autologin.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "contextualIdentities",
+    "cookies",
+    "tabs",
+    "storage"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "aws-saml-autologin@sjakthol.github.io"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true
+  }
+}
