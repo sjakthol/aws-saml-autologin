@@ -4,6 +4,6 @@
   "author": "Sami Jaktholm <sjakthol@outlook.com>",
   "license": "MIT",
   "devDependencies": {
-    "web-ext": "^6.8.0"
+    "web-ext": "^7.1.0"
   }
 }
